@@ -1,0 +1,9 @@
+body {
+    background-color: #34b6e9;
+}
+.banner {
+    text-align: center;
+    background-color: #036288;
+    color: white;
+    border-radius: 25px;
+}
