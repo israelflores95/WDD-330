@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Week 5 | Testing & Debugging</title>
+<link rel="stylesheet" href="../styles.css">
+<script src="../Week 5/main.js"></script>
+
+</head>
+
+<body>
+    <h1>Notes & questions</h1>
+    
+    <div>
+    <h2>Notes</h2>   
+    <ol>
+        <li>Stack Trace --> a trail to locate the error</li>
+        <li>Warnings --> The program will still run although it could be unstable</li>
+        <li>Strict mode --> Catches sloppy programming not just the immediate errors <br>
+            You can use "'use strict';" at the top of a javascript page to enable strict mode
+        </li>
+
+        <ol>
+            <h3>Methods for Debugging</h3>
+            <li>the "alert function" --> can help find when code stops running</li>
+            <li>Using the console --> Find erros via console.log, or within the browser console</li>
+            <li>Dont forget to remove debugging code when shipping(going into production)</li>
+            <li>Error objects --> will give an error to a specific reason</li>
+        </ol>
+        
+        <ol>
+            <h3>some of the popular ones are..</h3>
+            <li>range error --> number is outside an allowable range</li>
+            <li>referenceError --> When something is referred to but doesn't exist</li>
+            <li>SyntaxError --> The way the code is writen is wrong</li>
+            <li>typeError --> When there is an issue with 2 different data types</li>
+        </ol>
+
+        <ol>
+            <h3>Throwing Exceptions</h3>
+            <li>uses syntax "throw 'something';</li>
+            <li>use it to cuase an error</li>
+            <li>best practice throw a specific error(check main.js for more info)</li>
+        </ol>
+
+        <ol>
+            <h3>Try,Catch, and finally</h3>
+        </ol>
+    </ol>
+    </div>
+
+    <div>
+        <h2>questions</h2>   
+        <ol>
+            <li>In a try, catch, and finally block. Does the keyword 'error' catch all error exceptions? Is it different for different types of code blocks? Does it just catch all the errors that are thrown in?</li>
+        </ol>
+        </div>
+
+        <a href="/index.html">Back</a>
+</body>
+</html>
