@@ -1,0 +1,143 @@
+/* Start of General Site design */
+/* 
+Site colors
+
+Green hex #5FAD56 --> on time for task
+blue hex #3AAED8 --> completed task
+gray hex #494947 --> accent color
+red hex #EF2E2E --> Late for task
+white hex #FFFFFF --> background for now
+
+/* ------------------fonts------------------ */
+/* 
+Title font --> IBM Plex Sans (Regular 400)
+paragraph font --> Roboto (Medium 500)
+Tasks font --> font-family: 'Balsamiq Sans', cursive;
+*/
+
+
+/* ----------------------------------------- */
+
+/* Start of color variables*/
+:root {
+    /* colors */
+    --greenComplete: #5FAD56;
+    --blueAccent: #3AAED8;
+    --grayAccent: #969690;
+    --redDelete: #EF2E2E;
+    --background: #FFFFFF;
+    --titleText: white;
+
+    /* fonts */
+    --title: 'IBM Plex Sans', sans-serif;
+    --tasks: 'Balsamiq Sans', cursive;
+    --paragraphs: 'Roboto', sans-serif;
+    
+}
+
+/* General design */
+body {
+    text-align: center;
+    background-color: #a6eaff;
+}
+h1 {
+    font-family: var(--title);
+
+}
+ul {
+    padding: 0%;
+    font-family: var(--tasks);
+}
+
+/* ============================================ */
+/* =======Start of list items design=========== */
+/* ============================================ */
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.list-container div {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 280px;
+    height: 30px;
+}
+
+
+.todo {
+    justify-content: space-between;
+    margin: 1px;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 8px;
+}
+
+.complete-btn {
+    background-color: var(--greenComplete);
+}
+
+.delete-btn {
+    background-color: var(--redDelete);
+}
+
+.delete-btn, .complete-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.complete-btn:hover {
+    background-color: var(--blueAccent);
+}
+
+.fas.fa-minus-circle, .fas.fa-check {
+    pointer-events: none;
+}
+
+.todo.completed {
+    color: var(--blueAccent);
+    text-decoration: line-through;
+}
+
+.control-container {
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 280px;
+    margin: auto;
+    font-family: var(--paragraphs);
+}
+
+/* ============================================ */
+/* =======Start of add form/button============= */
+/* ============================================ */
+
+.todo-button {
+    background-color: var(--blueAccent);
+    border: none;
+}
+
+#form {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+}
+
+.input-todo, .todo-button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-family: var(--paragraphs);
+}
+
+
+
+.all-btn, .active-btn, .completed-btn {
+    background-color: var(--grayAccent);
+    border-radius: 5px;
+    padding: 8px;
+}

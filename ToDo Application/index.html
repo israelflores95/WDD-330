@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=IBM+Plex+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!-- css style sheets -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/small.css">
+    <link rel="stylesheet" href="./css/medium.css">
+    <link rel="stylesheet" href="./css/large.css">
+    
+    <title>To Do App</title>
+</head>
+<body>
+        <header>
+            <h1>My To Do List</h1>
+        </header>
+
+    <section class="content">
+
+        <section class="list-container">
+            <ul class="list-items"></ul>
+        </section>
+
+        <!-- Task view control buttons -->
+        <section class="control-container">
+            <div class="tasks-remaining"></div>
+            <button value="all" class="all-btn" >All</button>
+            <button value="active" class="active-btn">Active</button>
+            <button value="completed" class="completed-btn">Completed</button>
+        </section>
+
+                <!-- user input for list items -->
+        <form id="form">
+            <input type="text" class="input-todo" maxlength="20" required>
+            <button class="todo-button" type="submit"><i class="fas fa-plus"></i></button>
+        </form>
+
+    <!-- Font awesome-->
+    <script src="https://kit.fontawesome.com/716c988ae3.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    </section>
+</body>
+</html>
