@@ -4,7 +4,7 @@ const apiButton = document.getElementById('chuck');
 const outputDiv = document.getElementById('output');
 
 // API links to numbers and chuck norris
-const textURL = 'http://numbersapi.com/random';
+const textURL = 'https://numbersapi.com/random';
 const apiURL = 'https://api.chucknorris.io/jokes/random';
 
 // event listener for the numbers button
