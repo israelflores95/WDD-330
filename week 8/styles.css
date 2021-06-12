@@ -2,18 +2,18 @@ body {
     background-color: green;
 }
 
-/* .box {
+.box {
     background-color: white;
     height: 50px;
     width: 50px;
     position: relative;
-    animation-name: cool-animation; name animation (similar to naming a function then calling it or defning it later)
+    animation-name: cool-animation; /* name animation (similar to naming a function then calling it or defning it later) */
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 } 
-*/
+
 
 h1 {
     margin-top: 50px;
