@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles.css">
+    <script src="main.js"></script>
+
+    <title>Week 10</title>
+</head>
+<body>
+    <h1>Notes</h1>
+    <ol>
+        <li>Client Side valadation: Valadates data on the users browser</li>
+        <li>Server Side valadation: The data is sent to the server and the server valadates the data</li>
+        <li>Use "required", "minlength/maxlength", "min/max", "pattern" attrabutes to control client side valadation within HTML5</li>
+        <li>use "element-type: [type="form input type"] example in css code</li>
+    </ol>
+
+    <h1>questions</h1>
+
+    <h1>tests</h1>
+    <hr>
+    <form>
+        <p>the below box will be required and have a max charcter length of 5 and minlength of 3</p>
+        <input type="text" required maxlength="5" minlength="3" >
+        <input type="submit" value="submit">
+        <input type="password">
+    </form>
+
+    <hr>
+
+    <style>
+    input:invalid {
+        border: 2px dashed red;
+        background-color: blue;
+    }   
+
+    input:valid {
+        border: 2px solid black;
+    }
+
+    input[type="password"] {
+        background-color: red;
+    }
+    </style>
+
+    <a href="../index.html">Back</a>
+</body>
+</html>
