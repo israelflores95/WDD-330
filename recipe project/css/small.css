@@ -1,10 +1,49 @@
 /* SMARTPHONES LANDSCAPE */
 
 :root {
-    --main-background-: #9c1E43;
+    /* colors */
+    --main-background-color-: #F0C9B5;
+    --main-accent-color-: #75BDBC;
+    --secondary-accent-color-: #11AC77;
+    --main-card-color: #9c1E43;
+
+    /* fonts */
+    --main-title-font-: 'Mukta', sans-serif;
+    --secondary-title-font-: 'Yomogi', cursive;
+    --general-font-: 'Open Sans', sans-serif;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 450px) {
 
+    /* ===================================== */
+    /* ==========General styling============ */
+    html {
+        background-color: var(--main-background-color-);
+    }
+    body {
+        text-align: center;
+        font-family: var(--secondary-title-font-);
+    }
 
+    #title, h1 {
+        background-color: var(--main-accent-);
+        margin: 0px;
+        padding: 5px;
+        font-family: var(--main-title-font-);
+    }
+
+    /* ===================================== */
+    /* ==========Search Bar Styling========= */
+
+    #search-bar {
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    #search-bar-label {
+        display: none;
+    }
+
+    
 }
+

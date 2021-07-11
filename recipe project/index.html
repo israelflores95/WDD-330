@@ -13,17 +13,27 @@
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
 
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Open+Sans&family=Yomogi&display=swap" rel="stylesheet">
+
     <title>Israels Recipie book</title>
 </head>
 <body>
-    <h1 id="title">Israels Recipie Book</h1>
+    <div id="banner">
+        <div id="title">
+        <h1>Israels Recipie Book</h1>
+        </div>
 
-    <!-- Banner will include Search bar and menu -->
-    <div class="banner">
-        <form>
-            <label for="search-bar">Recipies</label>
-            <input type="text" name="search-bar" id="search-bar" placeholder="Chicken">
-        </form>
+        <!-- Banner will include Search bar and menu -->
+        <div class="search-bar-wrapper">
+            <form>
+                <label id="search-bar-label" for="search-bar">Search Recipie</label>
+                <input type="text" name="search-bar" 
+                id="search-bar" placeholder="Chicken">
+            </form>
+        </div>
     </div>
 
     <main>
