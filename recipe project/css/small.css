@@ -1,4 +1,9 @@
 /* SMARTPHONES LANDSCAPE */
+
+:root {
+    --main-background-: #9c1E43;
+}
+
 @media only screen and (min-width: 480px) {
 
 
