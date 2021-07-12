@@ -33,14 +33,9 @@ function generateHTML(results) {
     <div class='cards'>
     <h3>${result.title}</h3>
     <img src="${result.image}">
-    <div>
-    
-    <form class='recipe'>
-      <input class='detail-recipe' type=button value='View Recipe')">
-      <input type=button value='Save for later' >
-      <input type=hidden value='${result.id}'>
-    </form>
-    </div>
+
+    <a href="/detail-view.html?id='${result.id}'">View Recipe</a>
+    <a href="#">Save for later</a>
     </div>
     `
   })
