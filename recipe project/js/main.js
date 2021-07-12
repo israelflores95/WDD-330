@@ -1,9 +1,9 @@
 const serachForm = document.querySelector('form'); // select form for user input
-const searchResultOutput = document.querySelector('.search-cards');
+const viewRecipeBtn = document.querySelector('.detail-recipe');
+const searchResultOutput = document.querySelector('.search-cards'); //insert results
 
-const appId = "a5ce5878";
-const appKey = "76e3335921371cdb58467273143ec771";
-// const baseURL = `https://api.edamam.com/search?q=${serachForm}&app_id=${appId}&app_key=${appKey}`;
+const apiKey = '3e2ea81f31c843a3a252cade8934a3f5';
+const baseAPI = `https://api.spoonacular.com/recipes/`;
 
 // event listaner for form submit
 serachForm.addEventListener('submit', (e) => {
@@ -15,13 +15,14 @@ serachForm.addEventListener('submit', (e) => {
 
 // fetch API passing in user input for search.
 async function fetchAPI(searchQuery) {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${appId}&app_key=${appKey}&to=20`; // base url with user input, appid, and appkey
 
-  const response = await fetch(baseURL); //get API promise
+  const seachURL = `${baseAPI}complexSearch?apiKey=${apiKey}&analyze&query=${searchQuery}&number=25&maxReadyTime=90`;
+
+  const response = await fetch(seachURL); //get API promise
   const data = await response.json(); // convert promise to JSON (usuable code)
 
-  generateHTML(data.hits) // Wrap results in HTML
-  console.log(data);
+  generateHTML(data.results) // Wrap results in HTML
+  console.log(data.results);
 }
 
 //wrap result into HTML
@@ -30,12 +31,14 @@ function generateHTML(results) {
   results.map(result => { //loop through results and create HTML
     HTML += `
     <div class='cards'>
-    <h3>${result.recipe.label}</h3>
-    <img src="${result.recipe.image}">
-    <div class='card-content'>
-    <p>Total Time: ${result.recipe.totalTime} Minutes</p>
-    <p>Dish Type: ${result.recipe.dishType}</p>
-    <a href = '#'>View Recipe</a>
+    <h3>${result.title}</h3>
+    <img src="${result.image}">
+    <div>
+    <p>90 Minutes and under</p>
+    <form class='recipe'>
+    <input class='detail-recipe' type=button value='View Recipe')">
+    <input type=hidden value='${result.id}'>
+    </form>
     </div>
     </div>
     `
