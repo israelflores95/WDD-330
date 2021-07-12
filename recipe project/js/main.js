@@ -16,7 +16,7 @@ serachForm.addEventListener('submit', (e) => {
 // fetch API passing in user input for search.
 async function fetchAPI(searchQuery) {
 
-  const seachURL = `${baseAPI}complexSearch?apiKey=${apiKey}&analyze&query=${searchQuery}&number=25&maxReadyTime=90`;
+  const seachURL = `${baseAPI}complexSearch?apiKey=${apiKey}&analyze&query=${searchQuery}&number=35&maxReadyTime=90`;
 
   const response = await fetch(seachURL); //get API promise
   const data = await response.json(); // convert promise to JSON (usuable code)
@@ -37,6 +37,7 @@ function generateHTML(results) {
     <p>90 Minutes and under</p>
     <form class='recipe'>
     <input class='detail-recipe' type=button value='View Recipe')">
+    <input type=button value='Save for later' >
     <input type=hidden value='${result.id}'>
     </form>
     </div>

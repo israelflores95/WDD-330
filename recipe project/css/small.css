@@ -51,6 +51,10 @@
         display: none;
     }
 
+    #menu-btn {
+        display: none;
+    }
+
     /* ===================================== */
     /* ==========Search Bar Styling========= */
     .search-cards {
