@@ -60,5 +60,5 @@ h1 {
 .box2:hover {
     background-color: hotpink;
     border-radius: 50%;
-    transform: rotateY(80000000000000deg);
+    transform: rotateY(800deg);
 }
