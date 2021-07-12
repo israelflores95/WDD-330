@@ -34,11 +34,11 @@ function generateHTML(results) {
     <h3>${result.title}</h3>
     <img src="${result.image}">
     <div>
-    <p>90 Minutes and under</p>
+    
     <form class='recipe'>
-    <input class='detail-recipe' type=button value='View Recipe')">
-    <input type=button value='Save for later' >
-    <input type=hidden value='${result.id}'>
+      <input class='detail-recipe' type=button value='View Recipe')">
+      <input type=button value='Save for later' >
+      <input type=hidden value='${result.id}'>
     </form>
     </div>
     </div>
