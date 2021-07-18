@@ -5,7 +5,7 @@
     --main-background-color-: #032F33;
     --main-accent-color-: #2a5553;
     --secondary-accent-color-: #11AC77;
-    --main-card-color-: #9c1E43;
+    --third-accent-color-: #9c1E43;
     --main-text-color-: #Dff0F0;
 
     /* fonts */
@@ -35,6 +35,14 @@
         margin: 0px;
         padding: 5px;
         font-family: var(--main-title-font-);
+    }
+
+    .btn {
+        color: var(--main-text-color-);
+        text-decoration: none;
+        background-color: var(--third-accent-color-);
+        padding: 10px;
+        border-radius: var(--border-radius-);
     }
 
     /* ===================================== */
@@ -82,7 +90,7 @@
         display: inline-block;
         color: var(--main-text-color-);
         text-decoration: none;
-        background-color: var(--secondary-accent-color-);
+        background-color: var(--third-accent-color-);
         padding: 5px;
         margin: 8px;
         border-radius: 5px;
@@ -93,12 +101,84 @@
         display: inline-block;
         transform: scale(1.2);
         transition: 0.2s ease-in-out;
+        background-color: var(--secondary-accent-color-);
     }
 
     .cards p, h3 {
         margin: auto;
         max-width: 250px;
 
+    }
+
+    /* ===================================== */
+    /* =======Recipe detail styling========= */
+
+    .recipe-ingredients h2 {
+        padding: 15px;
+        margin: 0px;
+    }
+    
+    #full-recipe {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .recipe-cards h3 {
+        padding: 10px;
+    }
+
+    .recipe-cards {
+        background-color: var(--main-accent-color-);
+        border: solid 1px black;
+        border-radius:var(--border-radius-);
+        margin: 15px;
+    }
+
+    .recipe-cards img {
+        width: 85%;
+        border-radius: var(--border-radius-);
+        margin: 10px;
+    }
+
+    #ingredientsList {
+        text-align: left;
+        /* list-style-type: none; */
+        font-family: var(--general-font-);
+        padding: 0px;
+    }
+
+    #instructionsList {
+        text-align: left;
+        /* list-style-type: none; */
+        font-family: var(--general-font-);
+        padding: 0px;
+    }
+
+    #ingredientsList li {
+        padding: 3px;
+        margin-left: 12%;
+    }
+
+    #instructionsList li {
+        margin-left: 12%;
+        padding: 10px;
+    }
+
+    #summary {
+        font-family: var(--general-font-);
+        line-height: 2.0;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #recipe-back-btn {
+        /* position: fixed; */
+        margin-bottom: 15px;
+    }
+
+    #recipe-back-btn:hover{
+        background-color: var(--secondary-accent-color-);
     }
 
 }

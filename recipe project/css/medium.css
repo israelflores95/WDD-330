@@ -15,4 +15,24 @@
         border: none;
         background-color: var(--main-text-color-);
     }
+
+    #ingredientsList li {
+        padding: 3px;
+        margin-left: 14%;
+    }
+
+    #instructionsList li {
+        margin-left: 14%;
+        padding: 10px;
+    }
+
+    #full-recipe {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .recipe-cards {
+        max-width: 40%;
+    }
 }
