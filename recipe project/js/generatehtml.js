@@ -7,12 +7,12 @@ function generateSearchResult(results) {
       <h3>${result.title}</h3>
       <img src="${result.image}" alt="image of ${result.title}">
   
-      <a href="/detail-view.html?id=${result.id}">View Recipe</a>
+      <a href="recipe project\detail-view.html?id=${result.id}">View Recipe</a>
       <a href="#">Save for later</a>
       </div>
       `
     })
-  
+    
   searchResultOutput.innerHTML = HTML;
   }
 
