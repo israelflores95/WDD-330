@@ -8,7 +8,7 @@ function generateSearchResult(results) {
       <img src="${result.image}" alt="image of ${result.title}">
   
       <a href="detail-view.html?id=${result.id}">View Recipe</a>
-      <a href="#">Save for later</a>
+      <a href="/recipe-project/my-recipes.html?${result.id}" class="btn" id="recipe-back-btn">Save Recipe</a>
       </div>
       `
     })
@@ -25,7 +25,7 @@ function generateSearchResult(results) {
 
 
 
-//wrap result into HTML
+//wrap recipe into HTML
 function generateRecipe(data, instructions, ingredients) {
     let HTML = '';
 
@@ -78,8 +78,10 @@ function generateRecipe(data, instructions, ingredients) {
         <p id="summary">${data.summary}</p>
     </div>
 
-
     </div>
+
+    <a href="/recipe-project/index.html" class="btn" id="recipe-back-btn">Back to Search</a>
+    <a href="/recipe-project/my-recipes.html?${data.id}" class="btn" id="recipe-back-btn">Save Recipe</a>
     `
     recipeOutput.innerHTML = HTML;
 }
