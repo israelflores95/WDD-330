@@ -8,7 +8,7 @@ function generateSearchResult(results) {
       <img src="${result.image}" alt="image of ${result.title}">
   
       <a href="detail-view.html?id=${result.id}">View Recipe</a>
-      <a href="/recipe-project/my-recipes.html?${result.id}" class="btn" id="recipe-back-btn">Save Recipe</a>
+      <a onclick=saveRecipe(${result.id}) class="btn" id="recipe-back-btn">Save for later</a>
       </div>
       `
     })

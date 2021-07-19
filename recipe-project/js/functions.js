@@ -29,6 +29,39 @@ async function fetchRecipeDetail(recipeId) {
   console.log(data, instructions, ingredients);
 }
 
+// fetch specific recipe by ID
+async function fetchSpecificRecipe(recipeId) {
+
+  const seachURL = `${baseAPI}${recipeId}/information?apiKey=${apiKey}`;
+
+  const response = await fetch(seachURL); //get API promise
+  const data = await response.json(); // convert promise to JSON (usuable code)
+
+  console.log(data);
+}
+
+let storedRecipes = [];
+function saveRecipe(recipeId) { // add food recipe to local storage
+  
+  storedRecipes.push(recipeId);
+  localStorage.setItem("savedRecipes", JSON.stringify(storedRecipes));
+  // console.log(storedRecipes);
+}
+
+function removeSavedRecipe() { //remove recipe from local storage
+  
+}
+
+function getSavedRecipe() {
+const loadRecipes = window.localStorage.getItem("savedRecipes");
+const userRecipes = JSON.parse(loadRecipes)
+
+for (let i = 0; i <= userRecipes.length; i++) {
+  fetchSpecificRecipe(userRecipes.key[i]);
+}
+
+console.log(userRecipes);
+}
 
 
 

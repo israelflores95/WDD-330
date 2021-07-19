@@ -43,6 +43,7 @@
         background-color: var(--third-accent-color-);
         padding: 10px;
         border-radius: var(--border-radius-);
+        border: none;
     }
 
     .btn:hover {
@@ -68,6 +69,10 @@
 
     #menu-btn {
         display: none;
+    }
+
+    #nav-buttons {
+        margin-bottom: 30px;
     }
 
     /* ===================================== */
