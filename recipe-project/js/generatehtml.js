@@ -85,3 +85,19 @@ function generateRecipe(data, instructions, ingredients) {
     `
     recipeOutput.innerHTML = HTML;
 }
+
+
+function getSavedRecipeList(data) {
+    let HTML = '';
+      HTML += `
+      <div class='cards'>
+      <h3>${data.title}</h3>
+      <img src="${data.image}" alt="image of ${data.title}">
+  
+      <a href="detail-view.html?id=${data.id}">View Recipe</a>
+      <a onclick=saveRecipe(${data.id}) class="btn" id="recipe-back-btn">Delete Recipe</a>
+      </div>
+      `
+    
+  savedRecipes.innerHTML = HTML;
+  }

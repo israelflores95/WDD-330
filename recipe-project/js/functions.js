@@ -38,6 +38,8 @@ async function fetchSpecificRecipe(recipeId) {
   const data = await response.json(); // convert promise to JSON (usuable code)
 
   console.log(data);
+
+  getSavedRecipeList(data)
 }
 
 let storedRecipes = [];
@@ -56,9 +58,7 @@ function getSavedRecipe() {
 const loadRecipes = window.localStorage.getItem("savedRecipes");
 const userRecipes = JSON.parse(loadRecipes)
 
-for (let i = 0; i <= userRecipes.length; i++) {
-  fetchSpecificRecipe(userRecipes.key[i]);
-}
+window.onload = userRecipes.forEach(fetchSpecificRecipe);
 
 console.log(userRecipes);
 }
