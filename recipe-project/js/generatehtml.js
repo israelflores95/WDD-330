@@ -88,16 +88,39 @@ function generateRecipe(data, instructions, ingredients) {
 
 
 function getSavedRecipeList(data) {
-    let HTML = '';
-      HTML += `
-      <div class='cards'>
-      <h3>${data.title}</h3>
-      <img src="${data.image}" alt="image of ${data.title}">
-  
-      <a href="detail-view.html?id=${data.id}">View Recipe</a>
-      <a onclick=saveRecipe(${data.id}) class="btn" id="recipe-back-btn">Delete Recipe</a>
-      </div>
-      `
+
+    const newH3 = document.createElement('h3'); // create element and add data to it
+        newH3.innerHTML = data.title;
     
-  savedRecipes.innerHTML = HTML;
+    const newImg = document.createElement('img'); //add new img element
+        newImg.src = data.image; //add image source
+        newImg.alt = 'image of ' + data.title; // add title to image alt
+
+    const newP = document.createElement('p'); // create p element
+        newP.innerHTML = data.summary; // add recipe summery to recipe card
+
+    const viewRecipeLink = document.createElement('a'); // create a element (view recipe)
+        viewRecipeLink.className = 'btn';
+        viewRecipeLink.href = 'detail-view.html?id=' + data.id; // add link to view recipe detail
+        viewRecipeLink.innerText = 'View Recipe'; // add link text
+
+    const deleteRecipeLink = document.createElement('a'); // create a element (remove recipe)
+        deleteRecipeLink.className = 'btn';
+        deleteRecipeLink.href = './my-recipes.html?id=' + data.id;
+        deleteRecipeLink.onclick = removeSavedRecipe;
+        deleteRecipeLink.innerText = 'Delete Recipe'; // link text
+        
+
+    
+
+    const newDiv = document.createElement('div'); // create div container
+        newDiv.className = 'recipe-cards'; // add class to div
+        newDiv.appendChild(newH3); // add title to div
+        newDiv.appendChild(newImg); // add image tag to div
+        newDiv.appendChild(newP); // add recipe summery
+        newDiv.appendChild(viewRecipeLink); // add view recipe button/link
+        newDiv.appendChild(deleteRecipeLink);
+
+
+    savedRecipes.appendChild(newDiv);// add div to HTML
   }

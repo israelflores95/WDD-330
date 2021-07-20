@@ -37,6 +37,11 @@
         font-family: var(--main-title-font-);
     }
 
+    p {
+        font-family: var(--general-font-);
+        margin: 5px;
+    }
+
     .btn {
         color: var(--main-text-color-);
         text-decoration: none;
@@ -92,7 +97,7 @@
         margin-bottom: 25px;
     }
 
-    .cards img {
+    img {
         border-radius: var( --border-radius-);
         max-height: 250px;
         padding: 5px;
@@ -118,7 +123,7 @@
 
     .cards p, h3 {
         margin: auto;
-        max-width: 250px;
+        max-width: 90%;
 
     }
 
@@ -193,5 +198,25 @@
         background-color: var(--secondary-accent-color-);
     }
 
+    /* ===================================== */
+    /* =======Saved recipe styling========= */
+    
+    .saved-recipes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .recipe-cards p{
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .recipe-cards a {
+        margin: 10px;
+        min-width: 400px;
+    }
+
+    
 }
 

@@ -1,5 +1,5 @@
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 430px) {
+@media only screen and (min-width: 450px) {
     #search-bar {
         min-width: 300px;
         height: 25px;
@@ -28,11 +28,15 @@
 
     #full-recipe {
         flex-direction: row;
-        flex-wrap: wrap;
+        
         justify-content: space-evenly;
     }
 
     .recipe-cards {
         max-width: 40%;
+    }
+
+    .saved-recipes {
+        flex-wrap: wrap;
     }
 }

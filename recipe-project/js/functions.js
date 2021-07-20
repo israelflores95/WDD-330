@@ -50,8 +50,9 @@ function saveRecipe(recipeId) { // add food recipe to local storage
   // console.log(storedRecipes);
 }
 
-function removeSavedRecipe() { //remove recipe from local storage
-  
+function removeSavedRecipe(recipeId) { //remove recipe from local storage
+  storedRecipes = localStorage.getItem('savedRecipes');
+  alert(storedRecipes);
 }
 
 function getSavedRecipe() {
