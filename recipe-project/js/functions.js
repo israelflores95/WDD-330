@@ -59,7 +59,8 @@ function getSavedRecipe() {
 const loadRecipes = window.localStorage.getItem("savedRecipes");
 const userRecipes = JSON.parse(loadRecipes)
 
-userRecipes.forEach(fetchSpecificRecipe);
+userRecipes.forEach(recipe => 
+  fetchSpecificRecipe(recipe));
 
 console.log(userRecipes);
 }
