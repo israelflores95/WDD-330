@@ -53,11 +53,15 @@ function saveRecipe(recipeId) { // add food recipe to local storage
 
 function removeSavedRecipe(recipeId) { //remove recipe from local storage
 
-  // let filtered = storedRecipes.filter(value => {
-  //   return value !== recipeId;
-  // })
+  let loadRecipes = localStorage.getItem('savedRecipes');
+  const recipes = JSON.parse(loadRecipes);
 
-  console.log(recipeId);
+  var filtered =
+    recipes.filter(value => {
+      return value !== recipeId;
+    })
+
+  console.log(filtered);
 }
 
 function getSavedRecipe() {
