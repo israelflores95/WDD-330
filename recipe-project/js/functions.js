@@ -72,7 +72,7 @@ localStorage.setItem("savedRecipes", JSON.stringify(filteredRecipes));
 
 function getSavedRecipe() {
   const loadRecipes = window.localStorage.getItem("savedRecipes");
-  const userRecipes = JSON.parse(loadRecipes)
+  const userRecipes = JSON.parse(loadRecipes);
 
   userRecipes.forEach(recipe => 
     fetchSpecificRecipe(recipe));
