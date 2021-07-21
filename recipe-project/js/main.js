@@ -11,10 +11,8 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 const recipeId = urlParams.get('id') // get passed in recipe Id
 
-// const apiKey = '3e2ea81f31c843a3a252cade8934a3f5'; //byui email
-// const apiKey = 'ae7a12f6362b4c1dac37ef07fe44d86e'; // second gmail
-// const apiKey = '31c0fd7f83ca4209a8d1b6d59174324f'; // protonmail
-// const apiKey = 'dc81c54055a74b73b54fdf2284a677c0'; //gmail
+const apiKey = 'ae7a12f6362b4c1dac37ef07fe44d86e'; 
+
 
 const baseAPI = `https://api.spoonacular.com/recipes/`;
 
