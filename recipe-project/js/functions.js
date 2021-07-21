@@ -37,12 +37,13 @@ async function fetchSpecificRecipe(recipeId) {
   const response = await fetch(seachURL); //get API promise
   const data = await response.json(); // convert promise to JSON (usuable code)
 
-  console.log(data);
+  // console.log(data);
 
   getSavedRecipeList(data)
 }
 
 let storedRecipes = [];
+
 function saveRecipe(recipeId) { // add food recipe to local storage
   
   storedRecipes.push(recipeId);
@@ -51,19 +52,22 @@ function saveRecipe(recipeId) { // add food recipe to local storage
 }
 
 function removeSavedRecipe(recipeId) { //remove recipe from local storage
-  storedRecipes = localStorage.getItem('savedRecipes');
-  alert(storedRecipes);
+
+  // let filtered = storedRecipes.filter(value => {
+  //   return value !== recipeId;
+  // })
+
+  console.log(recipeId);
 }
 
 function getSavedRecipe() {
-  
-const loadRecipes = window.localStorage.getItem("savedRecipes");
-const userRecipes = JSON.parse(loadRecipes)
+  const loadRecipes = window.localStorage.getItem("savedRecipes");
+  const userRecipes = JSON.parse(loadRecipes)
 
-userRecipes.forEach(recipe => 
-  fetchSpecificRecipe(recipe));
+  userRecipes.forEach(recipe => 
+    fetchSpecificRecipe(recipe));
 
-console.log(userRecipes);
+  // console.log(userRecipes);
 }
 
 

@@ -9,20 +9,21 @@ const customRecipes = document.querySelector('.custom-recipes'); // output for c
 //get recipe ID through URL
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
-const recipeId = urlParams.get('id') // get passed in recipi Id
+const recipeId = urlParams.get('id') // get passed in recipe Id
 
-// const apiKey = '3e2ea81f31c843a3a252cade8934a3f5'; //byui email
+const apiKey = '3e2ea81f31c843a3a252cade8934a3f5'; //byui email
 // const apiKey = '31c0fd7f83ca4209a8d1b6d59174324f'; // protonmail
-const apiKey = 'dc81c54055a74b73b54fdf2284a677c0'; //gmail
+// const apiKey = 'dc81c54055a74b73b54fdf2284a677c0'; //gmail
 
 const baseAPI = `https://api.spoonacular.com/recipes/`;
 
 
-// event listaner for form submit
+// event listener for form submit
 serachForm.addEventListener('submit', (e) => {
   e.preventDefault(); // stop form from refreshing the page
   searchQuery = e.target.querySelector('input').value; // gets user input from searchbox
 
   fetchSearchResult(searchQuery); //call fetch API to get search result
 })
+
 

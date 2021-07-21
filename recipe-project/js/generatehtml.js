@@ -106,10 +106,14 @@ function getSavedRecipeList(data) {
 
     const deleteRecipeLink = document.createElement('a'); // create a element (remove recipe)
         deleteRecipeLink.className = 'btn';
-        deleteRecipeLink.href = './my-recipes.html?id=' + data.id;
-        deleteRecipeLink.onclick = removeSavedRecipe;
+        deleteRecipeLink.dataset.recipeId = data.id;
         deleteRecipeLink.innerText = 'Delete Recipe'; // link text
-        
+
+        deleteRecipeLink.addEventListener("click", (e) => {
+            e.preventDefault(); // stop page from refreshing
+
+            removeSavedRecipe(recipeId);
+        })
 
     
 
